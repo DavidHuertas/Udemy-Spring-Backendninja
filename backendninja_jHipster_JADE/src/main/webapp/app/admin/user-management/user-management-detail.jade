@@ -1,0 +1,46 @@
+div
+  h2
+    span(data-translate='userManagement.detail.title') User
+    |  [
+    b {{vm.user.login}}
+    | ]
+  dl.dl-horizontal.jh-entity-details
+    dt
+      span(data-translate='userManagement.login') Login
+    dd
+      span {{vm.user.login}}
+      span.label.label-danger(ng-show='!vm.user.activated', data-translate='userManagement.deactivated') Deactivated
+      span.label.label-success(ng-show='vm.user.activated', data-translate='userManagement.activated') Activated
+    dt
+      span(data-translate='userManagement.firstName') First Name
+    dd {{vm.user.firstName}}
+    dt
+      span(data-translate='userManagement.lastName') Last Name
+    dd {{vm.user.lastName}}
+    dt
+      span(data-translate='userManagement.email') Email
+    dd {{vm.user.email}}
+    dt
+      span(data-translate='userManagement.langKey') Lang Key
+    dd {{vm.user.langKey}}
+    dt
+      span(data-translate='userManagement.createdBy') Created By
+    dd {{vm.user.createdBy}}
+    dt
+      span(data-translate='userManagement.createdDate') Created Date
+    dd {{vm.user.createdDate | date:'dd/MM/yy HH:mm' }}
+    dt
+      span(data-translate='userManagement.lastModifiedBy') Last Modified By
+    dd {{vm.user.lastModifiedBy}}
+    dt
+      span(data-translate='userManagement.lastModifiedDate') Last Modified Date
+    dd {{vm.user.lastModifiedDate | date:'dd/MM/yy HH:mm'}}
+    dt
+      span(data-translate='userManagement.profiles') Profiles
+    dd
+      ul.list-unstyled
+        li(ng-repeat='authority in vm.user.authorities')
+          span.label.label-info {{authority}}
+  button.btn.btn-info(type='submit', ui-sref='user-management')
+    span.glyphicon.glyphicon-arrow-left
+    span(data-translate='entity.action.back')  Back

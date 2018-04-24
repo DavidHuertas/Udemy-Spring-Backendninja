@@ -1,0 +1,30 @@
+.modal-header
+  button.close(type='button', data-dismiss='modal', aria-hidden='true', ng-click='vm.cancel()') ×
+  h4.modal-title(data-translate='login.title') Sign in
+.modal-body
+  .row
+    .col-md-4.col-md-offset-4
+      h1(data-translate='login.title') Sign in
+    .col-md-8.col-md-offset-2
+      .alert.alert-danger(ng-show='vm.authenticationError', data-translate='login.messages.error.authentication')
+        strong Failed to sign in!
+        |  Please check your credentials and try again.
+    .col-md-8.col-md-offset-2
+      form.form(role='form', ng-submit='vm.login($event)')
+        .form-group
+          label(for='username', data-translate='global.form.username') Login
+          input#username.form-control(type='text', placeholder="{{'global.form.username.placeholder' | translate}}", ng-model='vm.username')
+        .form-group
+          label(for='password', data-translate='login.form.password') Password
+          input#password.form-control(type='password', placeholder="{{'login.form.password.placeholder' | translate}}", ng-model='vm.password')
+        .form-group
+          label(for='rememberMe')
+            input#rememberMe(type='checkbox', ng-model='vm.rememberMe', checked='')
+            span(data-translate='login.form.rememberme') Remember me
+        button.btn.btn-primary(type='submit', data-translate='login.form.button') Sign in
+      p
+      .alert.alert-warning
+        a.alert-link(href='', ng-click='vm.requestResetPassword()', data-translate='login.password.forgot') Did you forget your password?
+      .alert.alert-warning(data-translate='global.messages.info.register', translate-compile='')
+        | You don't have an account yet? 
+        a.alert-link(href='', ng-click='vm.register()') Register a new account

@@ -1,0 +1,34 @@
+div
+  h2(data-translate='audits.title') Audits
+  .row
+    .col-md-5
+      h4(data-translate='audits.filter.title') Filter by date
+      p.input-group
+        span.input-group-addon(data-translate='audits.filter.from') from
+        input.input-sm.form-control(type='date', name='start', ng-model='vm.fromDate', ng-change='vm.onChangeDate()', required='')
+        span.input-group-addon(data-translate='audits.filter.to') to
+        input.input-sm.form-control(type='date', name='end', ng-model='vm.toDate', ng-change='vm.onChangeDate()', required='')
+  table.table.table-condensed.table-striped.table-bordered.table-responsive
+    thead
+      tr
+        th(ng-click="predicate = 'timestamp'; reverse=!reverse")
+          span(data-translate='audits.table.header.date') Date
+        th(ng-click="predicate = 'principal'; reverse=!reverse")
+          span(data-translate='audits.table.header.principal') User
+        th(ng-click="predicate = 'type'; reverse=!reverse")
+          span(data-translate='audits.table.header.status') State
+        th(ng-click="predicate = 'data.message'; reverse=!reverse")
+          span(data-translate='audits.table.header.data') Extra data
+    tr(ng-repeat='audit in vm.audits | filter:filter | orderBy:predicate:reverse', ng-hide='audit.filtered')
+      td
+        span {{audit.timestamp| date:'medium'}}
+      td
+        small {{audit.principal}}
+      td {{audit.type}}
+      td
+        span(ng-show='audit.data.message') {{audit.data.message}}
+        span(ng-show='audit.data.remoteAddress')
+          span(data-translate='audits.table.data.remoteAddress') Remote Address
+          |  {{audit.data.remoteAddress}}
+  .text-center
+    uib-pagination.pagination-sm(total-items='vm.totalItems', ng-model='vm.page', ng-change='vm.loadPage(vm.page)')

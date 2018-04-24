@@ -1,0 +1,32 @@
+div
+  h2(data-translate='configuration.title') Configuration
+  span(data-translate='configuration.filter') Filter (by prefix)
+  input.form-control(type='text', ng-model='filter')
+  h3(ng-hide='filteredConfig.length === 0') Spring configuration
+  table.table.table-condensed.table-striped.table-bordered.table-responsive(style='table-layout:fixed', ng-hide='filteredConfig.length === 0')
+    thead
+      tr
+        th.col-sm-4(ng-click="predicate = 'prefix'; reverse=!reverse")
+          span(data-translate='configuration.table.prefix') Prefix
+        th.col-sm-8(data-translate='configuration.table.properties') Properties
+    tr(ng-repeat='entry in filtered = (vm.configuration | filter:filter | orderBy:predicate:reverse)')
+      td
+        span {{entry.prefix}}
+      td
+        .row(ng-repeat='(key, value) in entry.properties')
+          .col-md-4 {{key}}
+          .col-md-8
+            span.pull-right.label.label-success.break {{value}}
+  div(ng-repeat='(key, value) in vm.allConfiguration')
+    h4(ng-hide='filtered.length === 0')
+      span {{key}}
+    table.table.table-condensed.table-striped.table-bordered.table-responsive(style='table-layout:fixed', ng-hide='filtered.length === 0')
+      thead
+        tr
+          th.col-sm-4 Property
+          th.col-sm-8 Value
+      tbody
+        tr(ng-repeat='item in filtered = (value | filter:filter)')
+          td.break {{item.key}}
+          td.break
+            span.pull-right.label.label-success.break {{item.val}}

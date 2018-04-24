@@ -1,0 +1,659 @@
+Microsoft Windows [Versión 10.0.16299.192]
+(c) 2017 Microsoft Corporation. Todos los derechos reservados.
+
+C:\Projects>cd backendninja
+
+C:\Projects\backendninja>cd backendninja_jHipster
+
+C:\Projects\backendninja\backendninja_jHipster>jhipster
+Using JHipster version installed globally
+Running default command
+Executing jhipster:app
+Options:
+
+
+        ██╗ ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
+        ██║ ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
+        ██║ ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
+  ██╗   ██║ ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
+  ╚██████╔╝ ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
+   ╚═════╝  ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+
+                            http://www.jhipster.tech
+
+Welcome to the JHipster Generator v4.14.3
+ _______________________________________________________________________________________________________________
+
+  If you find JHipster useful consider supporting our collective https://opencollective.com/generator-jhipster
+  Documentation for creating an application: http://www.jhipster.tech/creating-an-app/
+ _______________________________________________________________________________________________________________
+
+Application files will be generated in folder: C:\Projects\backendninja\backendninja_jHipster
+WARNING! yarn is not found on your computer.
+
+? Which *type* of application would you like to create? Monolithic application (recommended for simple projects)
+? What is the base name of your application? BackendNinja_jHipster
+? What is your default Java package name? com.udemy
+? Do you want to use the JHipster Registry to configure, monitor and scale your application? No
+? Which *type* of authentication would you like to use? JWT authentication (stateless, with a token)
+? Which *type* of database would you like to use? SQL (H2, MySQL, MariaDB, PostgreSQL, Oracle, MSSQL)
+? Which *production* database would you like to use? MySQL
+? Which *development* database would you like to use? MySQL
+? Do you want to use the Spring cache abstraction? Yes, with the Ehcache implementation (local cache, for a single node)
+? Do you want to use Hibernate 2nd level cache? Yes
+? Would you like to use Maven or Gradle for building the backend? Maven
+? Which other technologies would you like to use?
+? Which *Framework* would you like to use for the client? AngularJS 1.x
+? Would you like to enable *SASS* support using the LibSass stylesheet preprocessor? Yes
+? Would you like to enable internationalization support? Yes
+? Please choose the native language of the application Spanish
+? Please choose additional languages to install English
+? Besides JUnit and Karma, which testing frameworks would you like to use?
+? Would you like to install other generators from the JHipster Marketplace? No
+
+Installing languages: es, en
+   create bower.json
+   create package.json
+   create README.md
+   create .gitignore
+   create .gitattributes
+   create .editorconfig
+   create src\main\docker\Dockerfile
+   create src\main\docker\.dockerignore
+   create src\main\docker\app.yml
+   create src\main\docker\mysql.yml
+   create src\main\docker\sonar.yml
+   create mvnw
+   create mvnw.cmd
+   create .mvn\wrapper\maven-wrapper.jar
+   create .mvn\wrapper\maven-wrapper.properties
+   create pom.xml
+   create src\main\resources\banner.txt
+   create src\main\resources\templates\error.html
+   create src\main\resources\logback-spring.xml
+   create src\main\resources\config\application.yml
+   create src\main\resources\config\application-dev.yml
+   create src\main\resources\config\application-prod.yml
+   create src\main\resources\config\liquibase\changelog\00000000000000_initial_schema.xml
+   create src\main\resources\config\liquibase\master.xml
+   create src\main\resources\i18n\messages.properties
+   create src\main\java\com\udemy\security\SpringSecurityAuditorAware.java
+   create src\main\java\com\udemy\security\SecurityUtils.java
+   create src\main\java\com\udemy\security\AuthoritiesConstants.java
+   create src\main\java\com\udemy\security\jwt\TokenProvider.java
+   create src\main\java\com\udemy\security\jwt\JWTConfigurer.java
+   create src\main\java\com\udemy\security\jwt\JWTFilter.java
+   create src\main\java\com\udemy\config\SecurityConfiguration.java
+   create src\main\java\com\udemy\security\DomainUserDetailsService.java
+   create src\main\java\com\udemy\security\UserNotActivatedException.java
+   create src\main\java\com\udemy\web\rest\vm\LoginVM.java
+   create src\main\java\com\udemy\web\rest\UserJWTController.java
+   create src\main\java\com\udemy\security\package-info.java
+   create src\main\java\com\udemy\BackendNinjaJHipsterApp.java
+   create src\main\java\com\udemy\ApplicationWebXml.java
+   create src\main\java\com\udemy\aop\logging\LoggingAspect.java
+   create src\main\java\com\udemy\config\DefaultProfileUtil.java
+   create src\main\java\com\udemy\config\package-info.java
+   create src\main\java\com\udemy\config\AsyncConfiguration.java
+   create src\main\java\com\udemy\config\CacheConfiguration.java
+   create src\main\java\com\udemy\config\Constants.java
+   create src\main\java\com\udemy\config\DateTimeFormatConfiguration.java
+   create src\main\java\com\udemy\config\LoggingConfiguration.java
+   create src\main\java\com\udemy\config\CloudDatabaseConfiguration.java
+   create src\main\java\com\udemy\config\DatabaseConfiguration.java
+   create src\main\java\com\udemy\config\audit\package-info.java
+   create src\main\java\com\udemy\config\audit\AuditEventConverter.java
+   create src\main\java\com\udemy\config\ApplicationProperties.java
+   create src\main\java\com\udemy\config\JacksonConfiguration.java
+   create src\main\java\com\udemy\config\LocaleConfiguration.java
+   create src\main\java\com\udemy\config\LoggingAspectConfiguration.java
+   create src\main\java\com\udemy\config\MetricsConfiguration.java
+   create src\main\java\com\udemy\config\ThymeleafConfiguration.java
+   create src\main\java\com\udemy\config\WebConfigurer.java
+   create src\main\java\com\udemy\domain\package-info.java
+   create src\main\java\com\udemy\domain\AbstractAuditingEntity.java
+   create src\main\java\com\udemy\domain\PersistentAuditEvent.java
+   create src\main\java\com\udemy\repository\package-info.java
+   create src\main\java\com\udemy\service\package-info.java
+   create src\main\java\com\udemy\service\util\RandomUtil.java
+   create src\main\java\com\udemy\web\rest\errors\package-info.java
+   create src\main\java\com\udemy\web\rest\errors\InternalServerErrorException.java
+   create src\main\java\com\udemy\web\rest\errors\BadRequestAlertException.java
+   create src\main\java\com\udemy\web\rest\errors\CustomParameterizedException.java
+   create src\main\java\com\udemy\web\rest\errors\EmailAlreadyUsedException.java
+   create src\main\java\com\udemy\web\rest\errors\EmailNotFoundException.java
+   create src\main\java\com\udemy\web\rest\errors\ErrorConstants.java
+   create src\main\java\com\udemy\web\rest\errors\ExceptionTranslator.java
+   create src\main\java\com\udemy\web\rest\errors\FieldErrorVM.java
+   create src\main\java\com\udemy\web\rest\errors\InvalidPasswordException.java
+   create src\main\java\com\udemy\web\rest\errors\LoginAlreadyUsedException.java
+   create src\main\java\com\udemy\web\rest\vm\package-info.java
+   create src\main\java\com\udemy\web\rest\vm\LoggerVM.java
+   create src\main\java\com\udemy\web\rest\util\HeaderUtil.java
+   create src\main\java\com\udemy\web\rest\util\PaginationUtil.java
+   create src\main\java\com\udemy\web\rest\package-info.java
+   create src\main\java\com\udemy\web\rest\LogsResource.java
+   create src\main\java\com\udemy\web\rest\ProfileInfoResource.java
+   create src\test\java\com\udemy\config\WebConfigurerTest.java
+   create src\test\java\com\udemy\config\WebConfigurerTestController.java
+   create src\test\java\com\udemy\web\rest\TestUtil.java
+   create src\test\java\com\udemy\web\rest\LogsResourceIntTest.java
+   create src\test\java\com\udemy\web\rest\ProfileInfoResourceIntTest.java
+   create src\test\java\com\udemy\web\rest\errors\ExceptionTranslatorIntTest.java
+   create src\test\java\com\udemy\web\rest\errors\ExceptionTranslatorTestController.java
+   create src\test\java\com\udemy\web\rest\util\PaginationUtilUnitTest.java
+   create src\test\resources\config\application.yml
+   create src\test\resources\logback.xml
+   create src\test\java\com\udemy\security\DomainUserDetailsServiceIntTest.java
+   create src\main\resources\config\liquibase\users.csv
+   create src\main\resources\config\liquibase\authorities.csv
+   create src\main\resources\config\liquibase\users_authorities.csv
+   create src\main\resources\mails\activationEmail.html
+   create src\main\resources\mails\creationEmail.html
+   create src\main\resources\mails\passwordResetEmail.html
+   create src\main\java\com\udemy\domain\User.java
+   create src\main\java\com\udemy\domain\Authority.java
+   create src\main\java\com\udemy\repository\CustomAuditEventRepository.java
+   create src\main\java\com\udemy\repository\AuthorityRepository.java
+   create src\main\java\com\udemy\repository\PersistenceAuditEventRepository.java
+   create src\main\java\com\udemy\repository\UserRepository.java
+   create src\main\java\com\udemy\service\UserService.java
+   create src\main\java\com\udemy\service\MailService.java
+   create src\main\java\com\udemy\service\AuditEventService.java
+   create src\main\java\com\udemy\service\dto\package-info.java
+   create src\main\java\com\udemy\service\dto\UserDTO.java
+   create src\main\java\com\udemy\web\rest\vm\ManagedUserVM.java
+   create src\main\java\com\udemy\web\rest\AccountResource.java
+   create src\main\java\com\udemy\web\rest\UserResource.java
+   create src\main\java\com\udemy\web\rest\vm\KeyAndPasswordVM.java
+   create src\main\java\com\udemy\service\mapper\package-info.java
+   create src\main\java\com\udemy\service\mapper\UserMapper.java
+   create src\main\java\com\udemy\web\rest\AuditResource.java
+   create src\test\resources\mails\testEmail.html
+   create src\test\resources\i18n\messages_en.properties
+   create src\test\java\com\udemy\service\MailServiceIntTest.java
+   create src\test\java\com\udemy\service\UserServiceIntTest.java
+   create src\test\java\com\udemy\web\rest\UserResourceIntTest.java
+   create src\test\java\com\udemy\web\rest\AccountResourceIntTest.java
+   create src\test\java\com\udemy\security\SecurityUtilsUnitTest.java
+   create src\test\java\com\udemy\security\jwt\JWTFilterTest.java
+   create src\test\java\com\udemy\security\jwt\TokenProviderTest.java
+   create src\test\java\com\udemy\web\rest\UserJWTControllerIntTest.java
+   create src\test\java\com\udemy\repository\CustomAuditEventRepositoryIntTest.java
+   create src\test\java\com\udemy\web\rest\AuditResourceIntTest.java
+   create gulp\handle-errors.js
+   create .bowerrc
+   create .eslintrc.json
+   create .eslintignore
+   create gulpfile.js
+   create gulp\utils.js
+   create gulp\serve.js
+   create gulp\config.js
+   create gulp\build.js
+   create gulp\copy.js
+   create gulp\inject.js
+   create src\main\webapp\content\css\main.css
+   create src\main\webapp\content\css\documentation.css
+   create src\main\webapp\scss\main.scss
+   create src\main\webapp\scss\vendor.scss
+   create src\main\webapp\content\images\hipster.png
+   create src\main\webapp\content\images\hipster2x.png
+   create src\main\webapp\content\images\logo-jhipster.png
+   create src\main\webapp\swagger-ui\index.html
+   create src\main\webapp\swagger-ui\images\throbber.gif
+   create src\main\webapp\favicon.ico
+   create src\main\webapp\robots.txt
+   create src\main\webapp\404.html
+   create src\main\webapp\index.html
+   create src\main\webapp\manifest.webapp
+   create src\main\webapp\app\app.module.js
+   create src\main\webapp\app\app.state.js
+   create src\main\webapp\app\app.constants.js
+   create src\main\webapp\app\blocks\handlers\state.handler.js
+   create src\main\webapp\app\blocks\config\alert.config.js
+   create src\main\webapp\app\blocks\config\http.config.js
+   create src\main\webapp\app\blocks\config\localstorage.config.js
+   create src\main\webapp\app\blocks\config\compile.config.js
+   create src\main\webapp\app\blocks\config\uib-pager.config.js
+   create src\main\webapp\app\blocks\config\uib-pagination.config.js
+   create src\main\webapp\app\blocks\interceptor\auth-expired.interceptor.js
+   create src\main\webapp\app\blocks\interceptor\errorhandler.interceptor.js
+   create src\main\webapp\app\blocks\interceptor\notification.interceptor.js
+   create src\main\webapp\app\blocks\handlers\translation.handler.js
+   create src\main\webapp\app\blocks\config\translation.config.js
+   create src\main\webapp\app\blocks\config\translation-storage.provider.js
+   create src\main\webapp\app\blocks\interceptor\auth.interceptor.js
+   create src\main\webapp\app\entities\entity.state.js
+   create src\main\webapp\app\home\home.controller.js
+   create src\main\webapp\app\home\home.state.js
+   create src\main\webapp\app\home\home.html
+   create src\main\webapp\app\layouts\navbar\navbar.controller.js
+   create src\main\webapp\app\services\profiles\profile.service.js
+   create src\main\webapp\app\services\profiles\page-ribbon.directive.js
+   create src\main\webapp\app\layouts\navbar\navbar.html
+   create src\main\webapp\app\layouts\error\error.html
+   create src\main\webapp\app\layouts\error\accessdenied.html
+   create src\main\webapp\app\layouts\error\error.state.js
+   create src\main\webapp\app\layouts\navbar\active-menu.directive.js
+   create src\main\webapp\app\account\account.state.js
+   create src\main\webapp\app\account\activate\activate.controller.js
+   create src\main\webapp\app\account\activate\activate.state.js
+   create src\main\webapp\app\account\activate\activate.html
+   create src\main\webapp\app\account\password\password.controller.js
+   create src\main\webapp\app\account\password\password.state.js
+   create src\main\webapp\app\account\password\password-strength-bar.directive.js
+   create src\main\webapp\app\account\password\password.html
+   create src\main\webapp\app\account\register\register.controller.js
+   create src\main\webapp\app\account\register\register.state.js
+   create src\main\webapp\app\account\register\register.html
+   create src\main\webapp\app\account\reset\request\reset.request.controller.js
+   create src\main\webapp\app\account\reset\request\reset.request.state.js
+   create src\main\webapp\app\account\reset\request\reset.request.html
+   create src\main\webapp\app\account\reset\finish\reset.finish.controller.js
+   create src\main\webapp\app\account\reset\finish\reset.finish.html
+   create src\main\webapp\app\account\reset\finish\reset.finish.state.js
+   create src\main\webapp\app\account\settings\settings.controller.js
+   create src\main\webapp\app\account\settings\settings.state.js
+   create src\main\webapp\app\account\settings\settings.html
+   create src\main\webapp\app\admin\admin.state.js
+   create src\main\webapp\app\admin\configuration\configuration.controller.js
+   create src\main\webapp\app\admin\configuration\configuration.service.js
+   create src\main\webapp\app\admin\configuration\configuration.state.js
+   create src\main\webapp\app\admin\configuration\configuration.html
+   create src\main\webapp\app\admin\health\health.controller.js
+   create src\main\webapp\app\admin\health\health.modal.controller.js
+   create src\main\webapp\app\admin\health\health.service.js
+   create src\main\webapp\app\admin\health\health.state.js
+   create src\main\webapp\app\admin\health\health.html
+   create src\main\webapp\app\admin\health\health.modal.html
+   create src\main\webapp\app\admin\logs\logs.controller.js
+   create src\main\webapp\app\admin\logs\logs.service.js
+   create src\main\webapp\app\admin\logs\logs.state.js
+   create src\main\webapp\app\admin\logs\logs.html
+   create src\main\webapp\app\admin\metrics\metrics.controller.js
+   create src\main\webapp\app\admin\metrics\metrics.modal.controller.js
+   create src\main\webapp\app\admin\metrics\metrics.service.js
+   create src\main\webapp\app\admin\metrics\metrics.state.js
+   create src\main\webapp\app\admin\metrics\metrics.html
+   create src\main\webapp\app\admin\metrics\metrics.modal.html
+   create src\main\webapp\app\admin\docs\docs.html
+   create src\main\webapp\app\admin\docs\docs.state.js
+   create src\main\webapp\app\admin\audits\audits.controller.js
+   create src\main\webapp\app\admin\audits\audits.service.js
+   create src\main\webapp\app\admin\audits\audits.state.js
+   create src\main\webapp\app\admin\audits\audits.html
+   create src\main\webapp\app\admin\user-management\user-management.html
+   create src\main\webapp\app\admin\user-management\user-management-detail.html
+   create src\main\webapp\app\admin\user-management\user-management-dialog.html
+   create src\main\webapp\app\admin\user-management\user-management-delete-dialog.html
+   create src\main\webapp\app\admin\user-management\user-management.state.js
+   create src\main\webapp\app\admin\user-management\user-management.controller.js
+   create src\main\webapp\app\admin\user-management\user-management-detail.controller.js
+   create src\main\webapp\app\admin\user-management\user-management-dialog.controller.js
+   create src\main\webapp\app\admin\user-management\user-management-delete-dialog.controller.js
+   create src\main\webapp\app\components\login\login.html
+   create src\main\webapp\app\components\login\login.service.js
+   create src\main\webapp\app\components\login\login.controller.js
+   create src\main\webapp\app\components\form\show-validation.directive.js
+   create src\main\webapp\app\components\form\maxbytes.directive.js
+   create src\main\webapp\app\components\form\minbytes.directive.js
+   create src\main\webapp\app\components\form\pagination.constants.js
+   create src\main\webapp\app\components\util\base64.service.js
+   create src\main\webapp\app\components\util\capitalize.filter.js
+   create src\main\webapp\app\components\util\error.constants.js
+   create src\main\webapp\app\components\util\parse-links.service.js
+   create src\main\webapp\app\components\util\truncate-characters.filter.js
+   create src\main\webapp\app\components\util\truncate-words.filter.js
+   create src\main\webapp\app\components\util\date-util.service.js
+   create src\main\webapp\app\components\util\data-util.service.js
+   create src\main\webapp\app\components\util\pagination-util.service.js
+   create src\main\webapp\app\components\util\sort.directive.js
+   create src\main\webapp\app\components\util\sort-by.directive.js
+   create src\main\webapp\app\components\util\jhi-item-count.directive.js
+   create src\main\webapp\app\components\alert\alert.service.js
+   create src\main\webapp\app\components\alert\alert.directive.js
+   create src\main\webapp\app\components\alert\alert-error.directive.js
+   create src\main\webapp\app\components\language\language.filter.js
+   create src\main\webapp\app\components\language\language.constants.js
+   create src\main\webapp\app\components\language\language.controller.js
+   create src\main\webapp\app\components\language\language.service.js
+   create src\main\webapp\app\services\auth\auth.service.js
+   create src\main\webapp\app\services\auth\principal.service.js
+   create src\main\webapp\app\services\auth\has-authority.directive.js
+   create src\main\webapp\app\services\auth\has-any-authority.directive.js
+   create src\main\webapp\app\services\auth\account.service.js
+   create src\main\webapp\app\services\auth\activate.service.js
+   create src\main\webapp\app\services\auth\password.service.js
+   create src\main\webapp\app\services\auth\password-reset-init.service.js
+   create src\main\webapp\app\services\auth\password-reset-finish.service.js
+   create src\main\webapp\app\services\auth\register.service.js
+   create src\main\webapp\app\services\user\user.service.js
+   create src\main\webapp\app\services\auth\auth.jwt.service.js
+   create src\test\javascript\karma.conf.js
+   create src\test\javascript\spec\helpers\module.js
+   create src\test\javascript\spec\helpers\httpBackend.js
+   create src\test\javascript\spec\app\admin\health\health.controller.spec.js
+   create src\test\javascript\spec\app\account\password\password.controller.spec.js
+   create src\test\javascript\spec\app\account\password\password-strength-bar.directive.spec.js
+   create src\test\javascript\spec\app\account\settings\settings.controller.spec.js
+   create src\test\javascript\spec\app\account\activate\activate.controller.spec.js
+   create src\test\javascript\spec\app\account\register\register.controller.spec.js
+   create src\test\javascript\spec\app\account\reset\finish\reset.finish.controller.spec.js
+   create src\test\javascript\spec\app\account\reset\request\reset.request.controller.spec.js
+   create src\test\javascript\spec\app\services\auth\auth.services.spec.js
+   create src\test\javascript\spec\app\components\login\login.controller.spec.js
+   create src\main\webapp\i18n\es\audits.json
+   create src\main\webapp\i18n\es\configuration.json
+   create src\main\webapp\i18n\es\error.json
+   create src\main\webapp\i18n\es\gateway.json
+   create src\main\webapp\i18n\es\login.json
+   create src\main\webapp\i18n\es\home.json
+   create src\main\webapp\i18n\es\metrics.json
+   create src\main\webapp\i18n\es\logs.json
+   create src\main\webapp\i18n\es\password.json
+   create src\main\webapp\i18n\es\register.json
+   create src\main\webapp\i18n\es\sessions.json
+   create src\main\webapp\i18n\es\settings.json
+   create src\main\webapp\i18n\es\user-management.json
+   create src\main\webapp\i18n\es\activate.json
+   create src\main\webapp\i18n\es\global.json
+   create src\main\webapp\i18n\es\health.json
+   create src\main\webapp\i18n\es\reset.json
+   create src\main\resources\i18n\messages_es.properties
+   create src\main\webapp\i18n\en\audits.json
+   create src\main\webapp\i18n\en\configuration.json
+   create src\main\webapp\i18n\en\error.json
+   create src\main\webapp\i18n\en\gateway.json
+   create src\main\webapp\i18n\en\login.json
+   create src\main\webapp\i18n\en\home.json
+   create src\main\webapp\i18n\en\metrics.json
+   create src\main\webapp\i18n\en\logs.json
+   create src\main\webapp\i18n\en\password.json
+   create src\main\webapp\i18n\en\register.json
+   create src\main\webapp\i18n\en\sessions.json
+   create src\main\webapp\i18n\en\settings.json
+   create src\main\webapp\i18n\en\user-management.json
+   create src\main\webapp\i18n\en\activate.json
+   create src\main\webapp\i18n\en\global.json
+   create src\main\webapp\i18n\en\health.json
+   create src\main\webapp\i18n\en\reset.json
+   create src\main\resources\i18n\messages_en.properties
+
+
+I'm all done. Running npm install && bower install for you to install the required dependencies. If this fails, try running the command yourself.
+
+
+npm WARN deprecated bower@1.7.9: ...psst! Your project can stop working at any moment because its dependencies can change. Prevent this by migrating to Yarn: https://bower.io/blog/2017/how-to-migrate-away-from-bower/
+npm WARN deprecated gulp-util@3.0.8: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5
+npm WARN deprecated gulp-util@3.0.7: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5
+npm WARN deprecated gulp-header@1.8.2: gulp-header 1.x is deprecated and will no longer be updated, please update to 2.x
+npm WARN deprecated gulp-util@2.2.20: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5
+npm WARN deprecated minimatch@0.3.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated graceful-fs@3.0.11: please upgrade to graceful-fs 4 for compatibility with current and future versions of Node.js
+npm WARN deprecated express@2.5.11: express 2.x series is deprecated
+npm WARN deprecated tough-cookie@2.2.2: ReDoS vulnerability parsing Set-Cookie https://nodesecurity.io/advisories/130
+npm WARN deprecated node-uuid@1.4.8: Use uuid module instead
+npm WARN deprecated minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated natives@1.1.3: This module relies on Node.js's internals and will break at some point. Do not use it, and update to graceful-fs@4.x.
+npm WARN deprecated connect@1.9.2: connect 1.x series is deprecated
+npm WARN deprecated formidable@1.0.17: Old versions of Formidable are not compatible with the current Node.js; Upgrade to 1.2.0 or later
+npm WARN deprecated minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated graceful-fs@1.2.3: please upgrade to graceful-fs 4 for compatibility with current and future versions of Node.js
+
+> phantomjs-prebuilt@2.1.16 install C:\Projects\backendninja\backendninja_jHipster\node_modules\phantomjs-prebuilt
+> node install.js
+
+Considering PhantomJS found at C:\Program Files (x86)\PhantomJS\bin\phantomjs.EXE
+Found PhantomJS at C:\Program Files (x86)\PhantomJS\bin\phantomjs.EXE ...verifying
+Writing location.js file
+PhantomJS is already installed on PATH at C:\Program Files (x86)\PhantomJS\bin\phantomjs.EXE
+
+> node-sass@4.8.3 install C:\Projects\backendninja\backendninja_jHipster\node_modules\node-sass
+> node scripts/install.js
+
+Cached binary found at C:\Users\dhuertas\AppData\Roaming\npm-cache\node-sass\4.8.3\win32-x64-57_binding.node
+
+> spawn-sync@1.0.15 postinstall C:\Projects\backendninja\backendninja_jHipster\node_modules\spawn-sync
+> node postinstall
+
+
+> node-sass@4.8.3 postinstall C:\Projects\backendninja\backendninja_jHipster\node_modules\node-sass
+> node scripts/build.js
+
+Binary found at C:\Projects\backendninja\backendninja_jHipster\node_modules\node-sass\vendor\win32-x64-57\binding.node
+Testing binary
+Binary is fine
+
+> gifsicle@3.0.4 postinstall C:\Projects\backendninja\backendninja_jHipster\node_modules\gifsicle
+> node lib/install.js
+
+  √ gifsicle pre-build test passed successfully
+
+> jpegtran-bin@3.2.0 postinstall C:\Projects\backendninja\backendninja_jHipster\node_modules\jpegtran-bin
+> node lib/install.js
+
+  √ jpegtran pre-build test passed successfully
+
+> optipng-bin@3.1.4 postinstall C:\Projects\backendninja\backendninja_jHipster\node_modules\optipng-bin
+> node lib/install.js
+
+  √ optipng pre-build test passed successfully
+
+> generator-jhipster@4.14.3 postinstall C:\Projects\backendninja\backendninja_jHipster\node_modules\generator-jhipster
+> opencollective postinstall
+
+
+     *** Thank you for using generator-jhipster! ***
+
+Please consider donating to our open collective
+     to help us maintain this package.
+
+  https://opencollective.com/generator-jhipster/donate
+
+                    ***
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN fsevents@1.2.0 had bundled packages that do not match the required version(s). They have been replaced with non-bundled versions.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.0 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.0: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+added 1764 packages from 1277 contributors in 211.11s
+bower angular-dynamic-locale#0.1.32           cached https://github.com/lgalfaso/angular-dynamic-locale.git#0.1.32
+bower angular-dynamic-locale#0.1.32         validate 0.1.32 against https://github.com/lgalfaso/angular-dynamic-locale.git#0.1.32
+bower angular-aria#1.5.8                      cached https://github.com/angular/bower-angular-aria.git#1.5.8
+bower angular-aria#1.5.8                    validate 1.5.8 against https://github.com/angular/bower-angular-aria.git#1.5.8
+bower angular#1.5.8                           cached https://github.com/angular/bower-angular.git#1.5.8
+bower angular#1.5.8                         validate 1.5.8 against https://github.com/angular/bower-angular.git#1.5.8
+bower angular-bootstrap#1.3.3                 cached https://github.com/angular-ui/bootstrap-bower.git#1.3.3
+bower angular-bootstrap#1.3.3               validate 1.3.3 against https://github.com/angular-ui/bootstrap-bower.git#1.3.3
+bower angular-cache-buster#0.4.3              cached https://github.com/saintmac/angular-cache-buster.git#0.4.3
+bower angular-cache-buster#0.4.3            validate 0.4.3 against https://github.com/saintmac/angular-cache-buster.git#0.4.3
+bower angular-resource#1.5.8                  cached https://github.com/angular/bower-angular-resource.git#1.5.8
+bower angular-resource#1.5.8                validate 1.5.8 against https://github.com/angular/bower-angular-resource.git#1.5.8
+bower angular-translate#2.11.1                cached https://github.com/PascalPrecht/bower-angular-translate.git#2.11.1
+bower angular-translate#2.11.1              validate 2.11.1 against https://github.com/PascalPrecht/bower-angular-translate.git#2.11.1
+bower angular-translate-storage-cookie#2.11.1 cached https://github.com/PascalPrecht/bower-angular-translate-storage-cookie.git#2.11.1
+bower angular-translate-storage-cookie#2.11.1         validate 2.11.1 against https://github.com/PascalPrecht/bower-angular-translate-storage-cookie.git#2.11.1
+bower angular-translate-interpolation-messageformat#2.11.1           cached https://github.com/PascalPrecht/bower-angular-translate-interpolation-messageformat.git#2.11.1
+bower angular-translate-interpolation-messageformat#2.11.1         validate 2.11.1 against https://github.com/PascalPrecht/bower-angular-translate-interpolation-messageformat.git#2.11.1
+bower angular-ui-router#0.3.1                                        cached https://github.com/angular-ui/angular-ui-router-bower.git#0.3.1
+bower angular-ui-router#0.3.1                                      validate 0.3.1 against https://github.com/angular-ui/angular-ui-router-bower.git#0.3.1
+bower bootstrap-sass#3.3.7                                           cached https://github.com/twbs/bootstrap-sass.git#3.3.7
+bower bootstrap-sass#3.3.7                                         validate 3.3.7 against https://github.com/twbs/bootstrap-sass.git#3.3.7
+bower bootstrap-ui-datetime-picker#2.4.3                             cached https://github.com/gillardo/bootstrap-ui-datetime-picker.git#2.4.3
+bower bootstrap-ui-datetime-picker#2.4.3                           validate 2.4.3 against https://github.com/gillardo/bootstrap-ui-datetime-picker.git#2.4.3
+bower json3#3.3.2                                                    cached https://github.com/bestiejs/json3.git#3.3.2
+bower json3#3.3.2                                                  validate 3.3.2 against https://github.com/bestiejs/json3.git#3.3.2
+bower ngstorage#0.3.10                                               cached https://github.com/gsklee/ngStorage.git#0.3.10
+bower ngstorage#0.3.10                                             validate 0.3.10 against https://github.com/gsklee/ngStorage.git#0.3.10
+bower modernizr#3.3.1                                                cached https://github.com/Modernizr/Modernizr.git#3.3.1
+bower modernizr#3.3.1                                              validate 3.3.1 against https://github.com/Modernizr/Modernizr.git#3.3.1
+bower angular-i18n#1.5.8                                             cached https://github.com/angular/bower-angular-i18n.git#1.5.8
+bower angular-i18n#1.5.8                                           validate 1.5.8 against https://github.com/angular/bower-angular-i18n.git#1.5.8
+bower angular-sanitize#1.5.8                                         cached https://github.com/angular/bower-angular-sanitize.git#1.5.8
+bower angular-sanitize#1.5.8                                       validate 1.5.8 against https://github.com/angular/bower-angular-sanitize.git#1.5.8
+bower swagger-ui#2.1.5                                               cached https://github.com/wordnik/swagger-ui.git#2.1.5
+bower swagger-ui#2.1.5                                             validate 2.1.5 against https://github.com/wordnik/swagger-ui.git#2.1.5
+bower angular-loading-bar#0.9.0                                      cached https://github.com/chieffancypants/angular-loading-bar.git#0.9.0
+bower angular-loading-bar#0.9.0                                    validate 0.9.0 against https://github.com/chieffancypants/angular-loading-bar.git#0.9.0
+bower ng-file-upload#12.0.4                                          cached https://github.com/danialfarid/angular-file-upload-bower.git#12.0.4
+bower ng-file-upload#12.0.4                                        validate 12.0.4 against https://github.com/danialfarid/angular-file-upload-bower.git#12.0.4
+bower jquery#3.1.0                                                   cached https://github.com/jquery/jquery-dist.git#3.1.0
+bower jquery#3.1.0                                                 validate 3.1.0 against https://github.com/jquery/jquery-dist.git#3.1.0
+bower angular-mocks#1.5.8                                            cached https://github.com/angular/bower-angular-mocks.git#1.5.8
+bower angular-mocks#1.5.8                                          validate 1.5.8 against https://github.com/angular/bower-angular-mocks.git#1.5.8
+bower angular-translate-loader-partial#2.11.1                        cached https://github.com/PascalPrecht/bower-angular-translate-loader-partial.git#2.11.1
+bower angular-translate-loader-partial#2.11.1                      validate 2.11.1 against https://github.com/PascalPrecht/bower-angular-translate-loader-partial.git#2.11.1
+bower angular-cookies#1.5.8                                          cached https://github.com/angular/bower-angular-cookies.git#1.5.8
+bower angular-cookies#1.5.8                                        validate 1.5.8 against https://github.com/angular/bower-angular-cookies.git#1.5.8
+bower messageformat#0.3.1                                            cached https://github.com/SlexAxton/messageformat.js.git#0.3.1
+bower messageformat#0.3.1                                          validate 0.3.1 against https://github.com/SlexAxton/messageformat.js.git#0.3.1
+bower ngInfiniteScroll#1.3.0                                         cached https://github.com/ng-infinite-scroll/ng-infinite-scroll-bower.git#1.3.0
+bower ngInfiniteScroll#1.3.0                                       validate 1.3.0 against https://github.com/ng-infinite-scroll/ng-infinite-scroll-bower.git#1.3.0bower angular                                              extra-resolution Unnecessary resolution: angular#1.5.8
+bower angular-bootstrap                                    extra-resolution Unnecessary resolution: angular-bootstrap#2.0.0
+bower jquery                                               extra-resolution Unnecessary resolution: jquery#3.1.0
+bower angular-dynamic-locale#0.1.32                                 install angular-dynamic-locale#0.1.32
+bower angular-cache-buster#0.4.3                                    install angular-cache-buster#0.4.3
+bower angular#1.5.8                                                 install angular#1.5.8
+bower angular-translate#2.11.1                                      install angular-translate#2.11.1
+bower angular-translate-storage-cookie#2.11.1                       install angular-translate-storage-cookie#2.11.1
+bower angular-bootstrap#1.3.3                                       install angular-bootstrap#1.3.3
+bower angular-translate-interpolation-messageformat#2.11.1          install angular-translate-interpolation-messageformat#2.11.1
+bower angular-ui-router#0.3.1                                       install angular-ui-router#0.3.1
+bower bootstrap-ui-datetime-picker#2.4.3                            install bootstrap-ui-datetime-picker#2.4.3
+bower bootstrap-sass#3.3.7                                          install bootstrap-sass#3.3.7
+bower json3#3.3.2                                                   install json3#3.3.2
+bower ngstorage#0.3.10                                              install ngstorage#0.3.10
+bower modernizr#3.3.1                                               install modernizr#3.3.1
+bower angular-i18n#1.5.8                                            install angular-i18n#1.5.8
+bower angular-loading-bar#0.9.0                                     install angular-loading-bar#0.9.0
+bower ng-file-upload#12.0.4                                         install ng-file-upload#12.0.4
+bower jquery#3.1.0                                                  install jquery#3.1.0
+bower angular-mocks#1.5.8                                           install angular-mocks#1.5.8
+bower swagger-ui#2.1.5                                              install swagger-ui#2.1.5
+bower angular-translate-loader-partial#2.11.1                       install angular-translate-loader-partial#2.11.1
+bower messageformat#0.3.1                                           install messageformat#0.3.1
+bower angular-cookies#1.5.8                                         install angular-cookies#1.5.8
+bower ngInfiniteScroll#1.3.0                                        install ngInfiniteScroll#1.3.0
+bower angular-aria#1.5.8                                            install angular-aria#1.5.8
+bower angular-resource#1.5.8                                        install angular-resource#1.5.8
+bower angular-sanitize#1.5.8                                        install angular-sanitize#1.5.8
+
+angular-dynamic-locale#0.1.32 src\main\webapp\bower_components\angular-dynamic-locale
+
+angular-cache-buster#0.4.3 src\main\webapp\bower_components\angular-cache-buster
+
+angular#1.5.8 src\main\webapp\bower_components\angular
+
+angular-translate#2.11.1 src\main\webapp\bower_components\angular-translate
+└── angular#1.5.8
+
+angular-translate-storage-cookie#2.11.1 src\main\webapp\bower_components\angular-translate-storage-cookie
+├── angular-cookies#1.5.8
+└── angular-translate#2.11.1
+
+angular-bootstrap#1.3.3 src\main\webapp\bower_components\angular-bootstrap
+└── angular#1.5.8
+
+angular-translate-interpolation-messageformat#2.11.1 src\main\webapp\bower_components\angular-translate-interpolation-messageformat
+├── angular-translate#2.11.1
+└── messageformat#0.3.1
+
+angular-ui-router#0.3.1 src\main\webapp\bower_components\angular-ui-router
+└── angular#1.5.8
+
+bootstrap-ui-datetime-picker#2.4.3 src\main\webapp\bower_components\bootstrap-ui-datetime-picker
+└── angular-bootstrap#1.3.3
+
+bootstrap-sass#3.3.7 src\main\webapp\bower_components\bootstrap-sass
+└── jquery#3.1.0
+
+json3#3.3.2 src\main\webapp\bower_components\json3
+
+ngstorage#0.3.10 src\main\webapp\bower_components\ngstorage
+└── angular#1.5.8
+
+modernizr#3.3.1 src\main\webapp\bower_components\modernizr
+
+angular-i18n#1.5.8 src\main\webapp\bower_components\angular-i18n
+
+angular-loading-bar#0.9.0 src\main\webapp\bower_components\angular-loading-bar
+└── angular#1.5.8
+
+ng-file-upload#12.0.4 src\main\webapp\bower_components\ng-file-upload
+└── angular#1.5.8
+
+jquery#3.1.0 src\main\webapp\bower_components\jquery
+
+angular-mocks#1.5.8 src\main\webapp\bower_components\angular-mocks
+└── angular#1.5.8
+
+swagger-ui#2.1.5 src\main\webapp\bower_components\swagger-ui
+
+angular-translate-loader-partial#2.11.1 src\main\webapp\bower_components\angular-translate-loader-partial
+└── angular-translate#2.11.1
+
+messageformat#0.3.1 src\main\webapp\bower_components\messageformat
+
+angular-cookies#1.5.8 src\main\webapp\bower_components\angular-cookies
+└── angular#1.5.8
+
+ngInfiniteScroll#1.3.0 src\main\webapp\bower_components\ngInfiniteScroll
+└── angular#1.5.8
+
+angular-aria#1.5.8 src\main\webapp\bower_components\angular-aria
+└── angular#1.5.8
+
+angular-resource#1.5.8 src\main\webapp\bower_components\angular-resource
+└── angular#1.5.8
+
+angular-sanitize#1.5.8 src\main\webapp\bower_components\angular-sanitize
+└── angular#1.5.8
+[17:12:05] Using gulpfile C:\Projects\backendninja\backendninja_jHipster\gulpfile.js
+[17:12:05] Starting 'install'...
+[17:12:05] Starting 'inject:test'...
+[17:12:05] Starting 'inject:vendor'...
+[17:12:05] Starting 'ngconstant:dev'...
+[17:12:05] Finished 'install' after 272 ms
+[17:12:05] gulp-inject 1 files into vendor.scss.
+[17:12:05] Finished 'ngconstant:dev' after 149 ms
+[17:12:05] gulp-inject 22 files into karma.conf.js.
+[17:12:05] gulp-inject 22 files into index.html.
+[17:12:05] Finished 'inject:test' after 396 ms
+[17:12:05] Finished 'inject:vendor' after 227 ms
+[17:12:05] Starting 'inject:dep'...
+[17:12:05] Finished 'inject:dep' after 36 μs
+[17:12:05] Starting 'sass'...
+[17:12:06] Tested 3 tests, 3 passes, 0 failures: PASS
+[17:12:06] Finished 'sass' after 969 ms
+[17:12:06] Starting 'copy:languages'...
+[17:12:06] Finished 'copy:languages' after 12 ms
+[17:12:06] Starting 'inject:app'...
+[17:12:06] gulp-inject 100 files into index.html.
+[17:12:06] Finished 'inject:app' after 325 ms
+[17:12:06] Starting 'inject:troubleshoot'...
+[17:12:06] gulp-inject 1 files into index.html.
+[17:12:06] Finished 'inject:troubleshoot' after 18 ms
+If you find JHipster useful consider supporting our collective https://opencollective.com/generator-jhipster
+
+Server application generated successfully.
+
+Run your Spring Boot application:
+ ./mvnw (mvnw if using Windows Command Prompt)
+
+Client application generated successfully.
+
+Inject your front end dependencies into your source code:
+ gulp inject
+
+Generate the AngularJS constants:
+ gulp ngconstant:dev
+
+Compile your Sass style sheets:
+
+gulp sass
+
+Or do all of the above:
+ gulp install
+
+Congratulations, JHipster execution is complete!

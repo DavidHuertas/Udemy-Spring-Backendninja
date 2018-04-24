@@ -1,0 +1,67 @@
+div
+  h2(data-translate='userManagement.home.title') Users
+  jhi-alert
+  .row
+    .col-md-4
+      button.btn.btn-primary(ui-sref='user-management.new')
+        span.glyphicon.glyphicon-flash
+        span(data-translate='userManagement.home.createLabel') Create a new User
+  .table-responsive
+    table.jh-table.table.table-striped
+      thead
+        tr(jh-sort='vm.predicate', ascending='vm.reverse', callback='vm.transition()')
+          th(jh-sort-by='id')
+            span(data-translate='global.field.id') ID
+            span.glyphicon.glyphicon-sort
+          th(jh-sort-by='login')
+            span(data-translate='userManagement.login') Login
+            span.glyphicon.glyphicon-sort
+          th(jh-sort-by='email')
+            span(data-translate='userManagement.email') Email
+            span.glyphicon.glyphicon-sort
+          th
+          th(jh-sort-by='langKey')
+            span(data-translate='userManagement.langKey') Lang Key
+            span.glyphicon.glyphicon-sort
+          th
+            span(data-translate='userManagement.profiles') Profiles
+          th(jh-sort-by='createdDate')
+            span(data-translate='userManagement.createdDate') Created Date
+            span.glyphicon.glyphicon-sort
+          th(jh-sort-by='lastModifiedBy')
+            span(data-translate='userManagement.lastModifiedBy') Last Modified By
+            span.glyphicon.glyphicon-sort
+          th(jh-sort-by='lastModifiedDate')
+            span(data-translate='userManagement.lastModifiedDate') Last Modified Date
+            span.glyphicon.glyphicon-sort
+          th
+      tbody
+        tr(ng-repeat='user in vm.users track by user.id')
+          td
+            a(ui-sref='user-management-detail({login:user.login})') {{user.id}}
+          td {{user.login}}
+          td {{user.email}}
+          td
+            button.btn.btn-danger.btn-xs(ng-click='vm.setActive(user, true)', ng-show='!user.activated', data-translate='userManagement.deactivated') Deactivated
+            button.btn.btn-success.btn-xs(ng-click='vm.setActive(user, false)', ng-show='user.activated', ng-disabled='vm.currentAccount.login === user.login', data-translate='userManagement.activated') Activated
+          td {{user.langKey}}
+          td
+            div(ng-repeat='authority in user.authorities')
+              span.label.label-info {{ authority }}
+          td {{user.createdDate | date:'dd/MM/yy HH:mm'}}
+          td {{user.lastModifiedBy}}
+          td {{user.lastModifiedDate | date:'dd/MM/yy HH:mm'}}
+          td.text-right
+            .btn-group.flex-btn-group-container
+              button.btn.btn-info.btn-sm(type='submit', ui-sref='user-management-detail({login:user.login})')
+                span.glyphicon.glyphicon-eye-open
+                span.hidden-xs.hidden-sm(data-translate='entity.action.view')
+              button.btn.btn-primary.btn-sm(type='submit', ui-sref='user-management.edit({login:user.login})')
+                span.glyphicon.glyphicon-pencil
+                span.hidden-xs.hidden-sm(data-translate='entity.action.edit')
+              button.btn.btn-danger.btn-sm(type='submit', ui-sref='user-management.delete({login:user.login})', ng-disabled='vm.currentAccount.login === user.login')
+                span.glyphicon.glyphicon-remove-circle
+                span.hidden-xs.hidden-sm(data-translate='entity.action.delete')
+  .text-center
+    jhi-item-count(page='vm.page', total='vm.queryCount', items-per-page='vm.itemsPerPage')
+    uib-pagination.pagination-sm(total-items='vm.totalItems', items-per-page='vm.itemsPerPage', ng-model='vm.page', ng-change='vm.transition()')

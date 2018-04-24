@@ -1,0 +1,51 @@
+// Modal used to display the threads dump
+.modal-header
+  button.close(type='button', ng-click='vm.cancel()') ×
+  h4.modal-title(data-translate='metrics.jvm.threads.dump.title') Threads dump
+.modal-body.pad
+  span.label.label-primary(ng-click='threadDumpFilter = {}')
+    | All 
+    span.badge {{vm.threadDumpAll}}
+  span.label.label-success(ng-click="threadDumpFilter = {threadState: 'RUNNABLE'}")
+    | Runnable 
+    span.badge {{vm.threadDumpRunnable}}
+  span.label.label-info(ng-click="threadDumpFilter = {threadState: 'WAITING'}")
+    | Waiting 
+    span.badge {{vm.threadDumpWaiting}}
+  span.label.label-warning(ng-click="threadDumpFilter = {threadState: 'TIMED_WAITING'}")
+    | Timed Waiting 
+    span.badge {{vm.threadDumpTimedWaiting}}
+  span.label.label-danger(ng-click="threadDumpFilter = {threadState: 'BLOCKED'}")
+    | Blocked 
+    span.badge {{vm.threadDumpBlocked}}
+  .voffset2  
+  |     Filter
+  input.form-control(type='text', ng-model='threadDumpFilter')
+  .row.pad(ng-repeat='(k, v) in vm.threadDump | filter:threadDumpFilter')
+    h5
+      span.label(ng-class='vm.getLabelClass(v.threadState)') {{v.threadState}}
+      |  {{v.threadName}} (ID {{v.threadId}})
+      a(ng-click='show = !show')
+        span(ng-show='!show', data-translate='metrics.jvm.threads.dump.show') Show StackTrace
+        span(ng-show='show', data-translate='metrics.jvm.threads.dump.hide') Hide StackTrace
+    .well(ng-show='show')
+      div(ng-repeat='(stK, stV) in v.stackTrace')
+        | {{stV.className}}.{{stV.methodName}}({{stV.fileName}}:{{stV.lineNumber}})
+        span.voffset1
+    table.table.table-condensed
+      thead
+        tr
+          th.text-right(data-translate='metrics.jvm.threads.dump.blockedtime') Blocked Time
+          th.text-right(data-translate='metrics.jvm.threads.dump.blockedcount') Blocked Count
+          th.text-right(data-translate='metrics.jvm.threads.dump.waitedtime') Waited Time
+          th.text-right(data-translate='metrics.jvm.threads.dump.waitedcount') Waited Count
+          th(data-translate='metrics.jvm.threads.dump.lockname') Lock Name
+      tbody
+        tr
+          td {{v.blockedTime}}
+          td {{v.blockedCount}}
+          td {{v.waitedTime}}
+          td {{v.waitedCount}}
+          td {{v.lockName}}
+.modal-footer
+  button.btn.btn-default.pull-left(type='button', data-dismiss='modal', ng-click='vm.cancel()') Done

@@ -1,0 +1,24 @@
+.modal-header
+  button.close(aria-label='Close', data-dismiss='modal', type='button', ng-click='vm.cancel()')
+    span(aria-hidden='true') ×
+  h4#showHealthLabel.modal-title
+    | {{'health.indicator.' + vm.baseName(vm.currentHealth.name) | translate}}
+    | {{vm.subSystemName(vm.currentHealth.name)}}
+.modal-body.pad
+  div(ng-show='vm.currentHealth.details')
+    h4(data-translate='health.details.properties') Properties
+    table.table.table-striped
+      thead
+        tr
+          th.col-md-6.text-left(data-translate='health.details.name') Name
+          th.col-md-6.text-left(data-translate='health.details.value') Value
+      tbody
+        tr(ng-repeat='(k,v) in vm.currentHealth.details')
+          td.col-md-6.text-left {{k}}
+          td.col-md-6.text-left {{v}}
+  div(ng-show='vm.currentHealth.error')
+    h4(data-translate='health.details.error') Error
+    pre.
+      \n{{vm.currentHealth.error}}      
+.modal-footer
+  button.btn.btn-default.pull-left(data-dismiss='modal', type='button', ng-click='vm.cancel()') Done

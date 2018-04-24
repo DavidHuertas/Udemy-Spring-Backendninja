@@ -1,0 +1,14 @@
+form(name='deleteForm', ng-submit='vm.confirmDelete(vm.user.login)')
+  .modal-header
+    button.close(type='button', data-dismiss='modal', aria-hidden='true', ng-click='vm.clear()') ×
+    h4.modal-title(data-translate='entity.delete.title') Confirm delete operation
+  .modal-body
+    jhi-alert-error
+    p(data-translate='userManagement.delete.question', translate-values="{login: '{{vm.user.login}}'}") Are you sure you want to delete this User?
+  .modal-footer
+    button.btn.btn-default(type='button', data-dismiss='modal', ng-click='vm.clear()')
+      span.glyphicon.glyphicon-ban-circle
+      span(data-translate='entity.action.cancel') Cancel
+    button.btn.btn-danger(type='submit')
+      span.glyphicon.glyphicon-remove-circle
+      span(data-translate='entity.action.delete') Delete

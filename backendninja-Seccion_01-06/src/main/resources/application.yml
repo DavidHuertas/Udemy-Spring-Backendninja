@@ -1,0 +1,41 @@
+#Banner Properties
+banner:
+  location: classpath:/banner/banner.txt
+#Server error properties
+server:
+  error:
+    whitelabel:
+      enabled: false      
+#Spring Boot:
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/backendninja_db
+    username: root
+    password: q1w2e3r4
+  jpa:
+    show-sql: true #Para mostrar en el Log las diferentes queries
+    hibernate:
+      ddl-auto: update #Actualiza las tablas según las entidades
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+#Thymeleaf Properties
+#spring:
+#  thymeleaf:
+#    cache: true
+#    check-template: true
+#    check-template-location: true
+#    content-type: text/html;
+#    enabled: true
+#    encoding: UTF-8
+#    excluded-view-names: 
+#    -vacío,vacío,vacío
+#    mode: HTML5
+#    prefix: classpath:/templates/
+#    suffix: .html
+#    template-resolver-order: vacío 
+#    view-names:
+#    -vacío 
